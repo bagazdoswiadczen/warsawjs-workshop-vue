@@ -12,18 +12,13 @@
 
 import TheHeader from './components/the-header.vue';
 import QuizDetails from './components/quiz-details.vue';
-import QuestionList from './components/question-list.vue';
-import AnswerList from './components/answer-list.vue';
-import AnswerListElement from './components/answer-list-element.vue';
+
 
 export default {
   name: 'app',
   components: {
     TheHeader,
-    QuizDetails,
-    QuestionList,
-    AnswerList,
-    AnswerListElement
+    QuizDetails
   },
   data() {
     return {
