@@ -1,7 +1,11 @@
 <template>
   <section v-if="question">
-    <answer-list :answers="question.answers"></answer-list>
-    <h2></h2>
+    <h2> {{ question.title }} </h2>
+    <answer-list
+    @SelectAnswerIndex="handleSelectAnswerIndex($event)"
+    :answers="question.answers"
+    :></answer-list>
+
   </section>
 </template>
 
@@ -16,11 +20,18 @@ export default {
   },
   props: {
     question: Object
-  }
-
+  },
+  methods: {
+    handleSelectAnswerIndex(answerIndex) {
+    console.log(answerIndex, this.question);
+  },
+}
 }
 </script>
 
 <style scoped>
+h2 {
+  text-align: center;
+}
 
 </style>

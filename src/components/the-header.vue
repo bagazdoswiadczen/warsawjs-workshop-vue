@@ -12,8 +12,10 @@
 </script>
 
 <style scoped>
-  h1 {
+  h1,
+  p {
     background: red;
+    text-align: center;
   }
 </style>
 
