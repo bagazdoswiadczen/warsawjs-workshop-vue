@@ -5,15 +5,22 @@
       <p> {{quiz.categoryName}} </p>
       <img :src="quiz.promo" alt="">
     </h1>
-    <h2></h2>
+
+    <question-list :questions="quiz.questions"></question-list>
   </section>
 </template>
 
 <script>
+
+import QuestionList from './question-list.vue';
+
 export default {
   name: "QuizDetails",
   props: {
     quiz: Object
+  },
+  components: {
+    QuestionList
   }
 }
 </script>
